@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pizzaria Sabor Real</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    
+    <header>
+        <h1>🍕 Pizzaria Sabor Real</h1>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="catalago.html">catalago</a>
+           
+        </nav>
+    </header>
+
+    
+    <section class="hero">
+
+        <div class="texto">
+            <h2>A melhor pizza da cidade</h2>
+
+            <p>
+                Pizzas artesanais feitas com ingredientes frescos,
+                massa crocante e muito recheio.
+            </p>
+
+            <button>Fazer Pedido</button>
+        </div>
+
+        <div class="imagem">
+            <img src="{{ url_for('static', filename='pizza.jpg') }}" alt="Pizza">
+        </div>
+
+    </section>
+
+</body>
+</html>
