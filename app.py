@@ -2,25 +2,22 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route("/")
-def home():
-   return render_template('index.html')
-    
+@app.route('/')
+def index():
+    return render_template('inicio.html')
 
-@app.route('/pizzaria/<sabor>')
-def pizzaria(sabor):
+@app.route('/cursos')
+def cursos():
+    return render_template('cursos.html')
 
-    if sabor == 'calabresa':
-        return render_template('calabresa.html',nome='Pizza de Calabresa',imagem='calabresa.jpg')
+@app.route('/professores')
+def professores():
+    return render_template('professores.html')
 
-    elif sabor == 'margherita':
-        return render_template('margherita.html',nome='Pizza Margherita', imagem='margherita.jpg')
-
-    elif sabor == 'frango':
-        return render_template('frango.html',nome='Pizza de Frango',imagem='frango.jpg')
-
-    else:
-        return 'Sabor não disponível'
+@app.route('/contato')
+def contato():
+    return render_template('contato.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
+
